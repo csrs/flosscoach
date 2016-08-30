@@ -24,6 +24,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = current_user.projects.build
+    @project.project_admin = current_user
     @languages = Language.all
     @tools = Tool.all
     @operationalsystems = OperationalSystem.all

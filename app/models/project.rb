@@ -4,6 +4,7 @@ class Project < ActiveRecord::Base
 	belongs_to :operational_systems 
 	belongs_to :tools
 	belongs_to :users
+	has_many	:projectAdmin
 
 
 def self.search(search)
