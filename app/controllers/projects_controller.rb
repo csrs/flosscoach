@@ -24,7 +24,8 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = current_user.projects.build
-    @project.project_admin = current_user
+    @project_admin.user = current_user
+    @project.project_admin = @project_admin
     @languages = Language.all
     @tools = Tool.all
     @operationalsystems = OperationalSystem.all
@@ -44,13 +45,13 @@ class ProjectsController < ApplicationController
     if params[:openhub_check] #Se a flag pra capturar dados do openhyb estiver ativa
       ohp = OpenHubProject.find_by_name(@project.name).first
       @project.about = "#{ohp.description} <br>
-                       <iframe src='https://www.openhub.net/p/#{ohp.vanity_url}/widgets/project_factoids_stats' 
-                       scrolling='no' marginheight='0' marginwidth='0' 
-                       style='height: 220px; width: 370px; border: none'></iframe>" 
+                       <iframe src='https://www.openhub.net/p/#{ohp.vanity_url}/widgets/project_factoids_stats'
+                       scrolling='no' marginheight='0' marginwidth='0'
+                       style='height: 220px; width: 370px; border: none'></iframe>"
       @project.image_url = ohp.medium_logo_url
       @project.link =  "OpenHub URL: <a href='#{ohp.html_url}'>#{ohp.html_url}</a><br>
                         Homepage Url: <a href='#{ohp.homepage_url}'>#{ohp.homepage_url}</a><br>
-                        Download URL: <a href='#{ohp.download_url}'>#{ohp.download_url}</a>" 
+                        Download URL: <a href='#{ohp.download_url}'>#{ohp.download_url}</a>"
     end
     @project.image_url ||= "assets/placeholder.png"
 
@@ -89,7 +90,7 @@ class ProjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:name, :description, :project_page_url, :about, :issue, :technical_skill, :soft_skill, :contribution, :workspace_setup, :resource, :documentation, :search_resource, :link, :send_contribution, :user_id, :tool_id, :language_id, :operational_system_id)
+      params.require(:project).permit(:name, :description, :project_page_url, :about, :issue, :technical_skill, :soft_skill, :contribution, :workspace_setup, :resource, :documentation, :search_resource, :link, :send_contribution, :user_id, :tool_id, :language_id, :operational_system_id, :project_admin)
     end
 
     def authorize_project

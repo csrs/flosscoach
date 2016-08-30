@@ -42,7 +42,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       respond_to do |format|
         format.json { render :json => { :status => 'Ok', :message => 'Received'}, :status => 200 }
-      end    
+      end
     else
       render :edit
     end
