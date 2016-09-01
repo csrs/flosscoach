@@ -1,14 +1,14 @@
 *.gem
 *.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/test/tmp/
-/test/version_tmp/
-/tmp/
-/public/assets/
+.config
+coverage/
+InstalledFiles
+pkg/
+spec/reports/
+test/tmp/
+test/version_tmp/
+tmp/
+public/assets/
 
 ## Specific to RubyMotion:
 .dat*
@@ -16,15 +16,15 @@
 build/
 
 ## Documentation cache and generated files:
-/.yardoc/
-/_yardoc/
-/doc/
-/rdoc/
+.yardoc/
+_yardoc/
+doc/
+rdoc/
 
 ## Environment normalisation:
-/.bundle/
-/vendor/bundle
-/lib/bundler/man/
+.bundle/
+vendor/bundle
+lib/bundler/man/
 
 # for a library or gem, you might want to ignore these files since the code is
 # intended to run in multiple environments; otherwise, check them in:
@@ -36,11 +36,11 @@ Gemfile.lock
 .rvmrc
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+db/*.sqlite3
+db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*
+log/*
 !/log/.keep
 ./tmp/*
 
@@ -50,7 +50,7 @@ db/schema.rb
 Gemfile.lock/
 public/system/
 # Ignore application configuration
-/config/application.yml
+config/application.yml
 
 #Ignoring coverage
 coverage
