@@ -28,12 +28,14 @@ class User < ActiveRecord::Base
 
 	#TODO: Refactor
 	def self.find_or_create_with_omniauth(auth)
-	    user = self.find_or_create_by(:provider => auth.provider,:uid => auth.uid)
-	    user.assign_attributes({ name: user.name || auth.info.name,
-	    	email: user.email || auth.info.email || "#{auth.info.name}@flosscoach.com",
-	    	photo_url: user.photo_url || auth.info.image,
-	    	fb_token: auth.credentials.token,
-	    	password: "abababbbb", password_confirmation: "abababbbb"})
+
+	    user = self.find_or_create_by(provider: auth[:provider], uid: auth[:uid])
+	    user.assign_attributes({
+				name: user.name || auth[:info][:name],
+	    	email: user.email || auth[:info][:email] || "#{auth.info.name}@flosscoach.com",
+	    	photo_url: user.photo_url || auth[:info][:image],
+	    	fb_token: auth[:credentials][:token],
+	    	password: "abababbbb", password_confirmation: "abababbbb"
 	    user.save!
 	    user
 	end
