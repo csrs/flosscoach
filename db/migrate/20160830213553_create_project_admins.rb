@@ -3,7 +3,7 @@ class CreateProjectAdmins < ActiveRecord::Migration
     create_table :project_admins do |t|
       t.belongs_to :user
     	t.belongs_to :project
-    	t.index [:user_id, :project_id], unique: true
+    	t.index [:user, :project]
       t.timestamps null: false
     end
   end

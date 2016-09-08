@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.photo_url ||= "/assets/avatar.jpeg"
     if @user.save
-      UsuarioMailer.newuser(@user).deliver
+      #UsuarioMailer.newuser(@user).deliver
       session[:user_id] = @user.id
       redirect_to projects_path
       #redirect_to @user

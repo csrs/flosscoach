@@ -5,12 +5,15 @@ class ProjectsController < ApplicationController
 
   # GET /projects
   def index
-    @projects = Project.all.search(params[:search])
+    @projects = Project.search(params[:search])
     if current_user
-      @myadmin = ProjectAdmin.where(:user_id => current_user)
-      @myproject = Project.where(:project_admin => @myadmin)
+      myadmin = ProjectAdmin.where(:user => current_user)
+      @myproject = Project.new
+      if myadmin
+        @myproject.id = myadmin.project
+      end
     else
-      @myproject = Project.all.search("nenhum")
+      @myproject = Project.search("nenhum")
     end
   end
 
@@ -36,15 +39,25 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
-    @codigourl = params[:id]
-    @language = Language.where(:id => @project.language_id).first
-    @tool = Tool.where(:id => @project.tool_id).first
-    @operationalsystem = OperationalSystem.where(:id => @project.operational_system_id).first
+    myadmin = ProjectAdmin.where(:user => current_user)
+    if myadmin.project == @project
+      @codigourl = params[:id]
+      @language = Language.where(:id => @project.language_id).first
+      @tool = Tool.where(:id => @project.tool_id).first
+      @operationalsystem = OperationalSystem.where(:id => @project.operational_system_id).first
+    else
+      redirect_to project_path(:id => @project.id)
+    end
   end
 
   # POST /projects
   def create
-    @project = @project_admin.projects.build(project_params)
+    @project = Project.new(project_params)
+    @project.save
+    project_admin = ProjectAdmin.new
+    project_admin.user_id = current_user.id
+    project_admin.project_id = @project.id
+    project_admin.save
     if params[:openhub_check] #Se a flag pra capturar dados do openhyb estiver ativa
       ohp = OpenHubProject.find_by_name(@project.name).first
       @project.about = "#{ohp.description} <br>
@@ -93,7 +106,7 @@ class ProjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def project_params
-      params.require(:project).permit(:name, :description, :project_page_url, :about, :issue, :technical_skill, :soft_skill, :contribution, :workspace_setup, :resource, :documentation, :search_resource, :link, :send_contribution, :user_id, :tool_id, :language_id, :operational_system_id, :project_admin)
+      params.require(:project).permit(:name, :description, :project_page_url, :about, :issue, :technical_skill, :soft_skill, :contribution, :workspace_setup, :resource, :documentation, :search_resource, :link, :send_contribution, :tool_id, :language_id, :operational_system_id)
     end
 
     def authorize_project
