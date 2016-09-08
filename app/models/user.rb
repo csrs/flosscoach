@@ -1,7 +1,6 @@
 require "bcrypt"
 
 class User < ActiveRecord::Base
-	has_many :projects
 	has_one :project_admin
 
 	validates_presence_of :email, :name

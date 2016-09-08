@@ -7,7 +7,8 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all.search(params[:search])
     if current_user
-      @myproject = current_user.projects.build
+      @myadmin = ProjectAdmin.where(:user_id => current_user)
+      @myproject = Project.where(:project_admin => @myadmin)
     else
       @myproject = Project.all.search("nenhum")
     end
@@ -23,9 +24,11 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = current_user.projects.build
-    @project_admin.user = current_user
-    @project.project_admin = @project_admin
+    @project = Project.new
+    project_admin = ProjectAdmin.new
+    project_admin.user_id = current_user.id
+    project_admin.project_id = @project.id
+    project_admin.save
     @languages = Language.all
     @tools = Tool.all
     @operationalsystems = OperationalSystem.all
@@ -41,7 +44,7 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   def create
-    @project = current_user.projects.build(project_params)
+    @project = @project_admin.projects.build(project_params)
     if params[:openhub_check] #Se a flag pra capturar dados do openhyb estiver ativa
       ohp = OpenHubProject.find_by_name(@project.name).first
       @project.about = "#{ohp.description} <br>

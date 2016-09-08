@@ -3,8 +3,7 @@ class Project < ActiveRecord::Base
 	belongs_to :languages
 	belongs_to :operational_systems
 	belongs_to :tools
-	belongs_to :users
-	has_many	:project_admin
+	has_many	:project_admin, :through => :user
 
 
 def self.search(search)

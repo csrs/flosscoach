@@ -9,16 +9,4 @@ class ProjectAdminsController < ApplicationController
     @project_admin = ProjectAdmin.new
   end
 
-  def create(@project)
-    @project_admin = ProjectAdmin.new
-    @project_admin.user = current_user
-    @project_admin.project = @project
-
-    if @project_admins.save
-      redirect_to @project_admin, notice: 'Project admin was successfully added.'
-    else
-      render :new
-    end
-  end
-
 end

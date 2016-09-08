@@ -11,5 +11,12 @@ class ApplicationController < ActionController::Base
     end
   end
   helper_method :current_user
-  
+
+  def create_project_admin(project)
+    @project_admin = ProjectAdmin.new
+    @project_admin.user = current_user
+    @project_admin.project = project
+  end
+
+
 end
