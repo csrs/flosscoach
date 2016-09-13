@@ -39,15 +39,12 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
-    myadmin = ProjectAdmin.where(:user => current_user)
-    if myadmin.project == @project
-      @codigourl = params[:id]
-      @language = Language.where(:id => @project.language_id).first
-      @tool = Tool.where(:id => @project.tool_id).first
-      @operationalsystem = OperationalSystem.where(:id => @project.operational_system_id).first
-    else
-      redirect_to project_path(:id => @project.id)
-    end
+    ProjectAdmin.where(:user => current_user, :project => @project)
+    redirect_to project_path(:id => @project.id) if projadmin?
+    @codigourl = params[:id]
+    @language = Language.where(:id => @project.language_id).first
+    @tool = Tool.where(:id => @project.tool_id).first
+    @operationalsystem = OperationalSystem.where(:id => @project.operational_system_id).first
   end
 
   # POST /projects
@@ -94,6 +91,11 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     redirect_to projects_url, notice: 'Project was successfully destroyed.'
+  end
+
+  def projadmin?
+    projadmin = ProjectAdmin.find_by(:user => current_user, :project => @project)
+    projadmin == nil
   end
 
 
