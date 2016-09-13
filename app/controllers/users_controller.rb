@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.photo_url ||= "/assets/avatar.jpeg"
     if @user.save
-      UsuarioMailer.newuser(@user).deliver
+      #UsuarioMailer.newuser(@user).deliver
       session[:user_id] = @user.id
       redirect_to projects_path
       #redirect_to @user
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       respond_to do |format|
         format.json { render :json => { :status => 'Ok', :message => 'Received'}, :status => 200 }
-      end    
+      end
     else
       render :edit
     end
