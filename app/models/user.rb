@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
 	    	email: user.email || auth[:info][:email] || "#{auth.info.name}@flosscoach.com",
 	    	photo_url: user.photo_url || auth[:info][:image],
 	    	fb_token: auth[:credentials][:token],
-	    	password: "abababbbb", password_confirmation: "abababbbb"
+	    	password: "abababbbb", password_confirmation: "abababbbb"})
 	    user.save!
 	    user
 	end
