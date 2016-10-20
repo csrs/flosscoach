@@ -8,6 +8,7 @@ gem 'rails', '4.2.5'
 
 group :production do
   gem 'pg'
+  gem 'uglifier'
 end
 
 group :development do

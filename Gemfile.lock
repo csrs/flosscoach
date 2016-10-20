@@ -254,6 +254,8 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (3.0.2)
+      execjs (>= 0.3.0, < 3)
     wasabi (3.5.0)
       httpi (~> 2.0)
       nokogiri (>= 1.4.2)
@@ -287,6 +289,7 @@ DEPENDENCIES
   summernote-rails
   therubyracer
   turbolinks
+  uglifier
 
 BUNDLED WITH
-   1.13.1
+   1.13.5
