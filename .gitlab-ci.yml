@@ -16,4 +16,4 @@ deploy:
   environment: production
   script:
   - gem install dpl
-  - dpl --provider=heroku --app=$deploygcs --api-key=$71810f315599603153ddf928c17011b624cf916672677e62b304e4f6b84bd6fea9e6e3f990b7425ba0478375ba5bc626aeafdb6ca51a69a7e7e8baf4d11417fb
+  - dpl --provider=heroku --api-key=$71810f315599603153ddf928c17011b624cf916672677e62b304e4f6b84bd6fea9e6e3f990b7425ba0478375ba5bc626aeafdb6ca51a69a7e7e8baf4d11417fb
