@@ -8,7 +8,7 @@ before_script:
 rspec:
   script:
     - bundle exec rspec
-    
+
 staging:
   type: deploy
   script:
@@ -16,3 +16,11 @@ staging:
   - dpl --provider=heroku --app=deploygcs --api-key=df17f508-fe8c-4e83-8bb5-c68763b573db
   only:
   - master
+
+production:
+  type: deploy
+  script:
+  - gem install dpl
+  - dpl --provider=heroku --api-key=$df17f508-fe8c-4e83-8bb5-c68763b573db
+  only:
+  - tags
