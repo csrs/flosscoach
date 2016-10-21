@@ -13,7 +13,7 @@ staging:
   type: deploy
   script:
   - gem install dpl
-  - dpl --provider=heroku --api-key=$a4c03b57-1ce5-412c-bfa0-d22cf844ae05
+  - dpl --provider=heroku --api-key=$df17f508-fe8c-4e83-8bb5-c68763b573db
   only:
   - master
 
@@ -21,6 +21,6 @@ production:
   type: deploy
   script:
   - gem install dpl
-  - dpl --provider=heroku --api-key=$a4c03b57-1ce5-412c-bfa0-d22cf844ae05
+  - dpl --provider=heroku --api-key=$df17f508-fe8c-4e83-8bb5-c68763b573db
   only:
   - tags
