@@ -42,7 +42,7 @@ group :test do
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem 'rspec-rails', '~> 3.5'
-  gem 'selenium-webdriver', '2.53.0'
+  gem 'selenium-webdriver', '2.53.1'
   gem 'simplecov', :require => false, :group => :test
 end
 
