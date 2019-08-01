@@ -28,10 +28,14 @@ We recommend using [Rails-Style-Guide](https://github.com/rubocop-hq/rails-style
 
 ## Authors and contacts
 FLOSScoach was idealized as part of a research. The main contact points are:
-Igor Steinmacher @igorsteinmacher 
-Igor Wiese @igorwiese
-Felipe Fronchetti @fronchetti
-Marco Gerosa
+- Igor Steinmacher @igorsteinmacher (igor.steinmacher [a] nau [] edu)
+- Igor Wiese @igorwiese (igor [a] utfpr [] edu [] br)
+- Felipe Fronchetti @fronchetti (fronchetti [a] usp [] br)
+- Marco Gerosa (marco.gerosa [a] nau [] edu))
+
+Feel free to contact us, or to mention one of us in the issue tracker
+
+Other developers, students, and colleagues also contributed to the project. We are thankful to all of them (https://gitlab.com/flosscoach/flosscoach/-/graphs/master)
 
 
 
