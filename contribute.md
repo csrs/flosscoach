@@ -1,6 +1,30 @@
-# How to set up a Ruby on Rails development environment
+# Contributing to FLOSScoach project
+There are many ways you can support our community. These are some of the options to contribute:
+- [File an issue (bug report or new feature request)](#file-an-issue)
+- Work on GitLab documentation 
+- [Help us coding: adding features or fixing bugs](#help-us-with-code)
 
-Hi! if you're willing to contribute to  **FLOSScoach** these are the simple setps you must follow to get your local machine ready for development. Tough easy and simple, these steps are estimated to take up to 30min.
+
+# File an issue
+- Did you find any problem while using FLOSScoach?
+- Do you have any great idea of new feature that would make FLOSScoach nicer? 
+
+Don't keep it to yourself. Please let us know! Reporting issues and providing feature requests are one of the things that makes Open Source amazing. 
+Please help us by creating a new issue report in our GitLab repository (either bug report or feature request). 
+
+To do so, go to the list of issues in our GitLab page, create a ``New Issue'' and provide as much details as you can in your report. 
+Remember to stay tuned in your issue to provide more details as requested by other members in the follow up comments.
+
+
+# Work on documentation (soft fixes)
+Another nice and easy way to start contributing to the project is by fixing issues or adding information to our documentation. 
+To do so, you just need to 1. navigate to the desired file (in this project they are usually markdown -- .md -- files); 
+2. edit in the GitLab editor; 3. submit your change request following the GitLab workflow.
+
+
+# Help us with code
+
+Hi! if you're willing to contribute with code to  **FLOSScoach** these are the simple setps you must follow to get your local machine ready for development. Tough easy and simple, these steps are estimated to take up to 30min.
 
 ## Step 0 - OS
 We're focusing here on the Linux operational system (Ubuntu, Mint and other distributions) . Steps may vary in case of MacOS or Windows. 
