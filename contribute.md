@@ -18,8 +18,10 @@ Remember to stay tuned in your issue to provide more details as requested by oth
 
 # Work on documentation 
 Another nice and easy way to start contributing to the project is by fixing issues or adding information to our documentation. 
-To do so, you just need to 1. navigate to the desired file (in this project they are usually markdown -- .md -- files); 
-2. edit in the GitLab editor; 3. submit your change request following the GitLab workflow.
+To do so, you just need to 
+1. navigate to the desired file (in this project they are usually markdown -- .md -- files); 
+2. edit in the GitLab editor; 
+3. submit your change request following the GitLab workflow.
 
 
 # Help us with code
