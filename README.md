@@ -9,22 +9,26 @@ FLOSSCoach portal has individual project pages, foruns and messages where you ca
 If you want to use [FLOSScoach](www.flosscoach.com) create an account and check the projects available. You may also want to add a project to our portfolio.
 Contact us for help!
 
-## Technologies
+## Technologies used to build
 FLOSScoach is build using:
 
 - [Ruby on Rails](https://github.com/rails/rails)
 - [PostgreSQL](https://www.postgresql.org/)
 - [GitLab CI](https://about.gitlab.com/product/continuous-integration/)
 
-## Contribute
+## Want to help? 
 Want to contribute and not sure how to start? Please read the [Contribute.md](contribute.md)
 We are happy to welcome new contributors.
 
-## Build status
+### Code style
+Want to code? So, we try to follow [Rails-Style-Guide](https://github.com/rubocop-hq/rails-style-guide) as a coding style
+
+### Deployment process
+Want to understand the deployment process? Check our (Deploying.md) 
+
+### Build status
 ![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/flosscoach/flosscoach.svg)
 
-## Code style
-We recommend using [Rails-Style-Guide](https://github.com/rubocop-hq/rails-style-guide) as a coding style
 
 ## Authors and contacts
 FLOSScoach was idealized as part of a research. The main contact points are:
