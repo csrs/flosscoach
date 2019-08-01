@@ -1,7 +1,7 @@
 # Contributing to FLOSScoach project
 There are many ways you can support our community. These are some of the options to contribute:
 - [File an issue (bug report or new feature request)](#file-an-issue)
-- Work on GitLab documentation 
+- [Work on GitLab documentation](#work-on-documentation)
 - [Help us coding: adding features or fixing bugs](#help-us-with-code)
 
 
@@ -16,7 +16,7 @@ To do so, go to the list of issues in our GitLab page, create a ``New Issue'' an
 Remember to stay tuned in your issue to provide more details as requested by other members in the follow up comments.
 
 
-# Work on documentation (soft fixes)
+# Work on documentation 
 Another nice and easy way to start contributing to the project is by fixing issues or adding information to our documentation. 
 To do so, you just need to 1. navigate to the desired file (in this project they are usually markdown -- .md -- files); 
 2. edit in the GitLab editor; 3. submit your change request following the GitLab workflow.
