@@ -16,15 +16,24 @@ FLOSScoach is build using:
 - [PostgreSQL](https://www.postgresql.org/)
 - [GitLab CI](https://about.gitlab.com/product/continuous-integration/)
 
+## Contribute
+Want to contribute and not sure how to start? Please read the [Contribute.md](contribute.md)
+We are happy to welcome new contributors.
+
 ## Build status
 ![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/flosscoach/flosscoach.svg)
 
 ## Code style
 We recommend using [Rails-Style-Guide](https://github.com/rubocop-hq/rails-style-guide) as a coding style
 
-## Contribute
-Want to contribute and not sure how to start? Please read the [Contribute.md](contribute.md)
+## Authors and contacts
+FLOSScoach was idealized as part of a research. The main contact points are:
+Igor Steinmacher @igorsteinmacher 
+Igor Wiese @igorwiese
+Felipe Fronchetti @fronchetti
+Marco Gerosa
 
-We are happy to welcome new contributors.
+
+
 
 
