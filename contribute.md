@@ -1,5 +1,8 @@
 # Contributing to FLOSScoach project
-There are many ways you can support our community. These are some of the options to contribute:
+FLOSScoach is built as an academic effort to provide better organization to support newcomers.
+We appreciate any community support, helping us with the following steps, interesting ideas,
+bug fixing, document improvement. In summary, there are many ways you can support our community.
+These are some of the options if you want to support us:
 - [File an issue (bug report or new feature request)](#file-an-issue)
 - [Work on GitLab documentation](#work-on-documentation)
 - [Help us coding: adding features or fixing bugs](#help-us-with-code)
