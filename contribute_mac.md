@@ -13,16 +13,7 @@ xcode-select --install
 ## Install Yarn using HomeBrew 
 This will also install Node.js if it is not already installed.
 ```bash
-brew install yarn
-brew install git
-brew install curl
-brew install zlib
-brew install openssl
-brew install libyaml
-brew install sqlite3
-brew install readline
-brew install libxml2
-brew install libffi
+brew install yarn git curl zlib openssl libyaml sqlite3 readline libxml2 libffi
 ```
 
 ```bash
@@ -88,7 +79,7 @@ cd flosscoach
 ```
 
 ```bash
-gem install nokogiri -v '1.8.2' --source 'https://rubygems.org/'
+sudo gem install nokogiri -v '1.8.2' --source 'https://rubygems.org/'
 bundle install
 ```
 
