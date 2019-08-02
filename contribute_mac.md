@@ -2,38 +2,28 @@
 
 Hi! if you're willing to contribute with code to  **FLOSScoach** these are the simple setps you must follow to get your local machine ready for development. Tough easy and simple, these steps are estimated to take up to 30min.
 
-## Step 0 - OS
+## Step 0 - OS / libraries
 We're focusing here on MacOS.
-```bash
-xcode-select --install
-```
-## Install HomeBrew
+
+Make sure that your MacOS is up-to-date, as well as your Xcode app (you can install it via App Store).
+
+## Step 1 - Install HomeBrew
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Install Yarn using HomeBrew 
-This will also install Node.js if it is not already installed.
-```bash
-brew install yarn git curl zlib openssl libyaml sqlite3 readline libxml2 libffi
-```
-
+## Step 2 - Install Ruby via renv
+First you need to install renv
 ```bash
 brew install rbenv ruby-build
 ruby -v
 ```
-Please note that we're installing Ruby version 2.3.*. If you have another version please do:
-
+Please note that we're installing Ruby version 2.4.0. If this is not the version you are running, please do: 
 ``` 
-rbenv install 2.3.*
-rbenv global 2.3.*
-[where * is the latest version number]
-
+rbenv install 2.4.0
+rbenv global 2.4.0
 ```
-
-```bash
-sudo gem install bundler
-```
+## Step 3 - Setup you git (maybe this is already set on your machine)
 
 ```bash
 git config --global color.ui true
@@ -42,34 +32,31 @@ git config --global user.email "yourEmailAdress@here.com"
 ```
 You might want to use the same email as the one used for yout Github/lab account.
 
-## Step 3 - Installing  Rails
+## Step 4 - Installing Bundler and Rails 
 ```bash
-sudo gem install rails -v 5.2.1
+gem install bundler
+gem install rails -v 5.2.1
 ```
 
-
-## Step 4 - Database: Setting up Sqlite3 and Postgre SQL
-Installing Postgre SQL can be done with the following commands:
+## Step 4 - Database: Installing and setting up PostgreSQL
+Installing PostgreSQL (in the right version) can be done with the following command:
 ```bash
 brew install postgresql@9.5
-brew install libpq
 ```
-You need to have postgres up and running
+Now...You need to have postgres up and running
 ```bash
 export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 brew services start postgresql@9.5
 ```
-Lastly, you need to set an user and password so then *FLOSScoach* database setup will be able to explore and modify the development database
+Lastly, you need to set a DB user and password so then *FLOSScoach* database setup will be able to explore and modify the development database
 
 ```bash
-# python is the username in the development set up.
+# python is the username (and the password) in the development set up.
 createuser python -s -P
+[It will prompt to enter a password: use python]
 ```
-It's important to know that the default development password is **python** and you must set it just like this
-```bash
-```
-In case you want different user/passoword just be sure to match these with 
-the present in the *config/database.yml* file 
+**AGAIN:** It is important to know that the default development password is **python** and you must set it just like this. 
+In case you want different user/passoword just be sure to match these with the present in the *config/database.yml* file in your project
 
 ## Step 5 - Cloning the FLOSScoach repository
 Now that everything is ready, it's time to clone the repository of the project to run your local development server and start contributing
@@ -81,22 +68,21 @@ git clone -b development https://gitlab.com/flosscoach/flosscoach.git
 cd flosscoach
 ```
 
-```bash
-sudo gem install nokogiri -v '1.8.2' --source 'https://rubygems.org/'
-bundle install
-```
+## Step 6 - MAKE IT RUN!!!
 
-Some final small adjustments:
+Let's get it on
 ```bash
+bundle install
 rake db:migrate RAILS_ENV=development
 rails server -p 8000
 ```
 Finally done!! See your local server running on [localhost:8000](http://localhost:8000)
 
-## Step 6 - Merging your contributions
+## Step 7 - Merging your contributions
+Write the code you need... 
 After you have finished writting some code these are the steps for adding your contribution to FLOSScoach:
 
-### Step 6.1 - Add changes to GitLab
+### Step 7.1 - Add changes to GitLab
 ```bash
 #cd to the project directory
 cd flossccoach
@@ -108,7 +94,7 @@ git commit -m "Insert commit message here"
 git push origin development
 #You will be prompted to insert your Gitlab login credentials then
 ```
-### Step 6.2 Merging changes
+### Step 7.2 Merging changes
 To merge the changes you've done on development to master branch you can follow the excelent instructions from [Gitlab official docs](https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html).
 It's quite simple to be done.
 
