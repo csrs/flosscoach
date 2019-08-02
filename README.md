@@ -6,9 +6,6 @@ about existing projects in a standardized way, making it easier for newcomer to 
 
 FLOSSCoach portal has individual project pages, foruns and messages where you can exchange relevant information about OSS with newcomers so they can start contributing
 
-If you want to use [FLOSScoach](www.flosscoach.com) create an account and check the projects available. You may also want to add a project to our portfolio.
-Contact us for help!
-
 ## Technologies used to build
 FLOSScoach is build using:
 
