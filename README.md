@@ -18,6 +18,7 @@ FLOSScoach is build using:
 
 ## Want to help? 
 Want to contribute and not sure how to start? Please read the [Contribute.md](contribute.md)
+
 We are happy to welcome new contributors.
 
 ### Code style
