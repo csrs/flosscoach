@@ -4,11 +4,13 @@ Hi! if you're willing to contribute with code to  **FLOSScoach** these are the s
 
 ## Step 0 - OS
 We're focusing here on MacOS.
-
+```bash
 xcode-select --install
-
+```
 ## Install HomeBrew
-```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 ## Install Yarn using HomeBrew 
 This will also install Node.js if it is not already installed.
