@@ -57,15 +57,12 @@ brew install libpq
 Lastly, you need to set an user and password so then *FLOSScoach* database setup will be able to explore and modify the development database
 
 ```bash
+export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 # python is the username in the development set up.
-createuser python -s
+createuser python -s -P
 ```
-It's important to jnow that the default development password is **python** and you must set it just like this
+It's important to know that the default development password is **python** and you must set it just like this
 ```bash
-# Setting password for the user named python:
-psql postgres
-\password python
-# And you will be prompted to type the new password
 ```
 In case you want different user/passoword just be sure to match these with 
 the present in the *config/database.yml* file 
