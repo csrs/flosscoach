@@ -54,10 +54,14 @@ Installing Postgre SQL can be done with the following commands:
 brew install postgresql@9.5
 brew install libpq
 ```
+You need to have postgres up and running
+```bash
+export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
+brew services start postgresql@9.5
+```
 Lastly, you need to set an user and password so then *FLOSScoach* database setup will be able to explore and modify the development database
 
 ```bash
-export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 # python is the username in the development set up.
 createuser python -s -P
 ```
