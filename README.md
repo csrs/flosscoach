@@ -39,6 +39,7 @@ Feel free to contact us, or to mention one of us in the issue tracker
 
 Other developers, students, and colleagues also contributed to the project. We are thankful to all of them (https://gitlab.com/flosscoach/flosscoach/-/graphs/master)
 
+test
 
 
 
