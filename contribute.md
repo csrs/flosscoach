@@ -3,8 +3,8 @@ FLOSScoach is built as an academic effort to provide better organization to supp
 We appreciate any community support, helping us with the following steps, interesting ideas,
 bug fixing, document improvement. In summary, there are many ways you can support our community.
 These are some of the options if you want to support us:
-- [File an issue (bug report or new feature request)](#file-an-issue)
-- [Help us coding: adding features or fixing bugs](#help-us-with-code)
+- File an issue (bug report or new feature request)
+- Help us coding: adding features or fixing bugs
 
 
 # File an issue
