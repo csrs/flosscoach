@@ -142,7 +142,5 @@ git push origin development
 #You will be prompted to insert your Gitlab login credentials then
 ```
 ### Step 6.2 Merging changes
-To merge the changes you've done on development to master branch you can follow the excelent instructions from [Gitlab official docs](https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html).
-It's quite simple to be done.
-
+File a merge request!
 
