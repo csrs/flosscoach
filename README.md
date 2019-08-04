@@ -30,10 +30,10 @@ Want to understand the deployment process? Check our (Deploying.md)
 
 ## Authors and contacts
 FLOSScoach was idealized as part of a research. The main contact points are:
-- Igor Steinmacher @igorsteinmacher (igor.steinmacher [a] nau [] edu)
-- Igor Wiese @igorwiese (igor [a] utfpr [] edu [] br)
-- Felipe Fronchetti @fronchetti (fronchetti [a] usp [] br)
-- Marco Gerosa (marco.gerosa [a] nau [] edu))
+- Igor Steinmacher
+- Igor Wiese 
+- Felipe Fronchetti 
+- Marco Gerosa 
 
 Feel free to contact us, or to mention one of us in the issue tracker
 
