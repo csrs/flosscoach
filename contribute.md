@@ -3,8 +3,8 @@ FLOSScoach is built as an academic effort to provide better organization to supp
 We appreciate any community support, helping us with the following steps, interesting ideas,
 bug fixing, document improvement. In summary, there are many ways you can support our community.
 These are some of the options if you want to support us:
-- File an issue (bug report or new feature request)
-- Help us coding: adding features or fixing bugs
+- [File an issue (bug report or new feature request)](#file-an-issue)
+- [Help us coding: adding features or fixing bugs](#help-us-with-code)
 
 
 # File an issue
@@ -142,5 +142,6 @@ git push origin development
 #You will be prompted to insert your Gitlab login credentials then
 ```
 ### Step 6.2 Merging changes
-File a merge request!
+To merge the changes you've done on development to master branch you can follow the excelent instructions from [Gitlab official docs](https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html).
+It's quite simple to be done.
 
