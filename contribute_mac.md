@@ -18,10 +18,20 @@ First you need to install renv
 brew install rbenv ruby-build
 ruby -v
 ```
+```
+rbenv uninstall 2.4.0
+```
+
+
 Please note that we're installing Ruby version 2.4.0. If this is not the version you are running, please do: 
 ``` 
 rbenv install 2.4.0
 rbenv global 2.4.0
+```
+
+``` bash
+rbenv init
+eval "$(rbenv init -)"
 ```
 ## Step 3 - Setup you git (maybe this is already set on your machine)
 
