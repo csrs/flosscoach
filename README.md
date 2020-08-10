@@ -4,7 +4,7 @@ We are a community aimed to help newcomers get into *Free/Libre Open Source Soft
 benefiting newcomers to avoid or overcome the most common barriers they face according to the research literature. The tool enables the inclusion of information
 about existing projects in a standardized way, making it easier for newcomer to get used to the contribution flow.
 
-FLOSSCoach portal has individual project pages, foruns and messages where you can exchange relevant information about OSS with newcomers so they can start contributing
+FLOSSCoach portal has individual project pages, foruns and messages where you can exchange relevant information about OSS with newcomers so they can start contributing 
 
 ## Technologies used to build
 FLOSScoach is build using:
